@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="649.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.FXMLController">
+   <children>
+      <AnchorPane fx:id="baslaEkrani" prefHeight="435.0" prefWidth="649.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="257.0" layoutY="43.0" text="İşlem Seçiniz" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="158.0" layoutY="118.0" prefHeight="200.0" prefWidth="333.0">
+               <children>
+                  <Button fx:id="toplamaSecim" layoutX="14.0" layoutY="61.0" mnemonicParsing="false" onAction="#toplamaSecme" prefHeight="55.0" prefWidth="99.0" style="-fx-background-color: white;" text="+" />
+                  <Button fx:id="cikarmSecim" layoutX="121.0" layoutY="61.0" mnemonicParsing="false" onAction="#cikarmaSecme" prefHeight="55.0" prefWidth="99.0" style="-fx-background-color: white;" text="-" />
+                  <Button fx:id="carpmaSecim" layoutX="227.0" layoutY="61.0" mnemonicParsing="false" onAction="#carpmaSecme" prefHeight="55.0" prefWidth="99.0" style="-fx-background-color: white;" text="x" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="oyunEkrani" prefHeight="435.0" prefWidth="649.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Label fx:id="sorular" alignment="CENTER" layoutX="167.0" layoutY="84.0" prefHeight="45.0" prefWidth="317.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cevapGirisi" layoutX="219.0" layoutY="166.0" onKeyPressed="#entertikla" prefHeight="45.0" prefWidth="211.0" />
+            <Button fx:id="onayla" layoutX="281.0" layoutY="244.0" mnemonicParsing="false" onAction="#onayla" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: black;" text="Onayla" textFill="WHITE" />
+            <Label fx:id="dogruSayisi" layoutX="14.0" layoutY="14.0" text="Doğru Sayısı: 0" textFill="#24a800">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="yanlisSayisi" layoutX="14.0" layoutY="31.0" text="Yanlış Sayısı: 0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="enYuksek" layoutX="14.0" layoutY="48.0" text="En Yüksek: 0" textFill="#0900ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
